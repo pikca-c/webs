@@ -15,7 +15,6 @@ allow_cookies.click()
 
 gcse = driver.find_element(By.CLASS_NAME, "content__region")
 print (gcse.text)
-#find my id
-#or find by xpath
+
 
   
