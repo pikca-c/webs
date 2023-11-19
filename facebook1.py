@@ -46,7 +46,7 @@ def _extract_post_id(item):
 
 
 def _extract_image(item):
-    postPictures = item.find_all(class_="scaledImageFitWidth img")
+    postPictures = item.find_all(class_="x1ey2m1c xds687c x5yr21d x10l6tqk x17qophe x13vifvy xh8yej3 xl1xv1r")
     image = ""
     for postPicture in postPictures:
         image = postPicture.get('src')
@@ -200,9 +200,10 @@ def _extract_html(bs_data):
 def _login(browser, email, password):
     browser.get("http://facebook.com")
     browser.maximize_window()
+    time.sleep(5)
     browser.find_element_by_name("email").send_keys(email)
     browser.find_element_by_name("pass").send_keys(password)
-    browser.find_element_by_id('loginbutton').click()
+    browser.find_element_by_name('login').click()
     time.sleep(5)
 
 
@@ -358,7 +359,7 @@ if __name__ == "__main__":
         scrape_comment = True
 
     postBigDict = extract(page=args.page, numOfPost=args.len, infinite_scroll=infinite, scrape_comment=scrape_comment)
-    print("data"+postBigDict)
+
 
     #TODO: rewrite parser
     if args.usage == "WT":
