@@ -358,7 +358,7 @@ if __name__ == "__main__":
         scrape_comment = True
 
     postBigDict = extract(page=args.page, numOfPost=args.len, infinite_scroll=infinite, scrape_comment=scrape_comment)
-
+    print("data"+postBigDict)
 
     #TODO: rewrite parser
     if args.usage == "WT":
