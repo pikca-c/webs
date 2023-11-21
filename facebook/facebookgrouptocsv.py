@@ -1,8 +1,8 @@
 import facebook_scraper as fs
 
-for i in range(1, 101):
+for i in range(1, 5):
     fs.write_posts_to_csv(
-        group="pokemoncardsbuysell", # The method uses get_posts internally so you can use the same arguments and they will be passed along
+        group="UKRailtours", # The method uses get_posts internally so you can use the same arguments and they will be passed along
         page_limit=100,
         timeout=60,
         options={

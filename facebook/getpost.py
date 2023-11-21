@@ -1,5 +1,7 @@
-#Needs credentials to run
+#Credentials required to access the facebook page
 from facebook_scraper import get_posts
 
-for post in get_posts('NintendoUK', pages=3, credentials=('****@gmail.com', '******')):
-    print(post['text'][:50])
+for post in get_posts('avantiwestcoastrail', pages=1, credentials=('****@gmail.com', '***'), options={"comments": True}):
+    print(post)
+    print(post['text'])
+    print(post['comments'])
