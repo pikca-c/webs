@@ -14,8 +14,8 @@ from bs4 import BeautifulSoup as bs
 
 
 
-EMAIL = "wjones2652@gmail.com"
-PASSWORD = "bA25C558Ym!RMC+"
+EMAIL = "**@gmail.com"
+PASSWORD = "****"
 
 def _extract_post_text(item):
     actualPosts = item.find_all(attrs={"data-testid": "post_message"})
