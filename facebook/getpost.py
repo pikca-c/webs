@@ -8,6 +8,5 @@ for post in get_posts('avantiwestcoastrail', pages=1, credentials=('**@gmail.com
     no = 0
     for comment in post['comments_full']:
         no = no + 1 
-        print(f"Commenter: {comment['commenter_name']}")
-        print(f"Comment Number {no}: {comment['comment_text']}")
-        print("\n")
+        print(f"Commenter {no}: {comment['commenter_name']}")
+        print(f"Comment {no}: {comment['comment_text']}\n")
