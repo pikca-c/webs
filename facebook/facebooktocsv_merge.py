@@ -11,7 +11,7 @@ no_of_pages = 1
 fieldnames = ['Date', 'Post Content', 'Post Comments', 'Commenter', 'Comment Number', 'Comment Text']
 
 data = pd.read_csv(fname, encoding='utf-8')
-data_temp = data.copy()
+data_temp = get_posts
 data[fieldnames[0]] = "123"
 pd.concat([data, data_temp], ignore_index=True).to_csv(output_file, index=False, encoding='utf-8')
 data.to_csv(output_file, index=False, encoding='utf-8')
