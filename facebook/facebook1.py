@@ -7,15 +7,17 @@ import argparse
 import time
 import json
 import csv
+import os 
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup as bs
+from dotenv import load_dotenv
 
+load_dotenv()
 
-
-EMAIL = "**@gmail.com"
-PASSWORD = "****"
+EMAIL = os.getenv('facebookusername')
+PASSWORD = os.getenv('facebookpassword')
 
 def _extract_post_text(item):
     actualPosts = item.find_all(attrs={"data-testid": "post_message"})
