@@ -2,7 +2,8 @@ import csv
 import os
 import pandas as pd
 from facebook_scraper import get_posts
-
+from dotenv import load_dotenv
+load_dotenv()
 
 page_name = 'avantiwestcoastrail'
 fname = page_name + '.csv'
@@ -11,7 +12,9 @@ no_of_pages = 1
 fieldnames = ['Date', 'Post Content', 'Post Comments', 'Commenter', 'Comment Number', 'Comment Text']
 
 data = pd.read_csv(fname, encoding='utf-8')
-data_temp = get_posts
+data_temp = get_posts(page_name, pages=no_of_pages, credentials=(os.getenv('facebookusername'), os.getenv('facebookpassword')), options={"comments": True})
+data_temp = pd.DataFrame(data_temp)
+print(data_temp)
 data[fieldnames[0]] = "123"
 pd.concat([data, data_temp], ignore_index=True).to_csv(output_file, index=False, encoding='utf-8')
 data.to_csv(output_file, index=False, encoding='utf-8')
