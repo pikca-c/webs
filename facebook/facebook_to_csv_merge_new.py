@@ -31,7 +31,6 @@ for post in posts:
     postlist.append(postitem)
 '''
 
-print(data_temp)
 try:
     data = pd.read_csv(fname, encoding='utf-8')
     output = pd.concat([data, data_temp], ignore_index=True).to_csv(output_file, index=False, encoding='utf-8')
