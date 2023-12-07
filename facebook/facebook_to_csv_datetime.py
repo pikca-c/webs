@@ -7,7 +7,7 @@ load_dotenv()
 
 page_name = 'avantiwestcoastrail'
 fname = page_name + "_"+ datetime.date.today().strftime("%Y%m%d") + '.csv'
-no_of_pages = 1
+no_of_pages = 10
 fieldnames = ['Date', 'Post Content', 'Post Comments', 'Commenter', 'Comment Number', 'Comment Text']
 
 with open(fname, 'w', newline='', encoding='utf-8') as csvfile:

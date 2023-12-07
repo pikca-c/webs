@@ -27,18 +27,18 @@ output.to_csv(output_file, index=False, encoding='utf-8')
 '''
 1. Read in the csv file -> new dataframe
 2. run the facebook_scraper -> data
-3. data -> dataframe
-4. merge the two dataframes
-5. write to csv
+3. data -> dataframe (multi columns problems to be solved) + post_id
+4. check if post_id exists in the dataframe
+    a. if yes, skip
+    b. if no, append
+5. merge the two dataframes
+6. write to csv
+7. mulit pages fetch
 
-data structure:
+data structure(Post):
 Post_ID(index) 
 Date
 post content
 comments : [comment]
 ...
-
-if date > yesterday:
-do sth. -> append in csv
-
 '''	
